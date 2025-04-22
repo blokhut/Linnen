@@ -92,22 +92,27 @@
         }
 
         .title {
-            color: rgb(0, 0, 0);
+            color: white;
             font-size: min(6vw, 6vh);
             margin-bottom: 30px;
             text-align: center;
             font-weight: 800;
             letter-spacing: -0.03em;
             text-transform: uppercase;
-      
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            /* Verwijderd: gradient en webkit properties */
+            text-shadow: 
+                2px 2px 0 rgba(0, 0, 0, 0.8),
+                -2px -2px 0 rgba(0, 0, 0, 0.8),
+                2px -2px 0 rgba(0, 0, 0, 0.8),
+                -2px 2px 0 rgba(0, 0, 0, 0.8); /* Dikke outline voor betere leesbaarheid */
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparante achtergrond */
+            padding: 15px 30px;
+            border-radius: 10px;
         }
     </style>
 </head>
 <body>
-    <div class="title">Hoeveel schermen rockt Linnen vandaag? Stable Genius!</div>
+    <div class="title">Hoeveel schermen rockt Linnen vandaag? Harvard, Kilmar Abrego Garcia, Powell, Pete Hegseth</div>
     <div class="emoji-grid" id="tvGrid"></div>
     <div id="counter" class="counter"></div>
 
