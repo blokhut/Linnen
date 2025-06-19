@@ -15,26 +15,53 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background: 
+            /* Iraanse vlag: groen-wit-rood horizontale banen */
+            background:
                 linear-gradient(
-                    rgba(255, 255, 255, 0.925),
-                    rgba(255, 161, 161, 0.925)
+                    rgba(0, 0, 0, 0.70), 
+                    rgba(0, 0, 0, 0.70)
                 ),
-                repeating-linear-gradient(
+                linear-gradient(
                     to bottom,
-                    #bf0a30 0px,
-                    #bf0a30 38.5px,
-                    #ffffff 38.5px,
-                    #ffffff 77px
-                ),
-                linear-gradient(
-                    90deg,
-                    #002868 0%,
-                    #002868 30%,
-                    transparent 30%
+                    #239f40 0%,      /* Groen */
+                    #239f40 33.33%,
+                    #ffffff 33.33%,
+                    #ffffff 66.66%,
+                    #da0000 66.66%,
+                    #da0000 100%
                 );
             padding: 20px;
             font-family: 'Inter', sans-serif;
+            position: relative;
+        }
+
+        /* Embleem van Iran in het midden (gestileerde halve maan met zwaard) */
+        body::after {
+            content: "";
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 120px;
+            height: 120px;
+            background: none;
+            z-index: 0;
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 10px solid #da0000;
+            border-bottom: none;
+            border-left: none;
+            border-right: none;
+            z-index: 1;
+            opacity: 0.25;
         }
 
         .emoji-grid {
@@ -112,8 +139,7 @@
     </style>
 </head>
 <body>
-    <div class="title">Hoeveel schermen rockt Linnen vandaag? Harvard, Kilmar Abrego Garcia, Powell, Pete Hegseth, Tarrifs, Insurrection Act
-, Elon Musk, 20 January, Steve Bannon, Project 2025, Associated Press, Greenland, Panama canal, Nayib Armando Bukele Ortez, Jan Dirk Vance.
+    <div class="title">Hoeveel schermen rocken Linnen en de Persian Party crew vandaag? 
 </div>
     <div class="emoji-grid" id="tvGrid"></div>
     <div id="counter" class="counter"></div>
